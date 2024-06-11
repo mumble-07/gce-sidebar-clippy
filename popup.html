@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clipboard Sidebar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 10px;
+      width: 250px;
+    }
+    .clipboard-item {
+      padding: 5px;
+      border-bottom: 1px solid #ddd;
+      word-wrap: break-word;
+    }
+    .clipboard-item:last-child {
+      border-bottom: none;
+    }
+    .collapsible {
+      background-color: #f1f1f1;
+      color: #444;
+      cursor: pointer;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+    .active, .collapsible:hover {
+      background-color: #ccc;
+    }
+    .content {
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <button class="collapsible">Clipboard</button>
+  <div class="content">
+    <div id="clipboard"></div>
+    <button id="clear">Clear Clipboard</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
